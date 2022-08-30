@@ -1,4 +1,4 @@
-import { displayPopup, displayQuotes } from "./displayQuotes";
+import { displayQuotes } from "./displayQuotes";
 const itemList = document.querySelector('.item-list')
 export async function getApi(data)
 

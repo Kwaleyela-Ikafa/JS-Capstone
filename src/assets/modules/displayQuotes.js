@@ -1,5 +1,7 @@
+import { displayPopup } from "./displayPopup"
 const itemList = document.querySelector('.item-list')
 const popupSection = document.querySelector('.popup')
+
 
 export const displayQuotes = (data) => {
     let slicedArray = data.slice(0, 6)
@@ -18,14 +20,15 @@ export const displayQuotes = (data) => {
     })
 }
 
-const displayPopup = (popupdata, id) => {
-    popupdata.map((data) => {
-        if (id === data.c) {
-            const item = `<li> Name: <span class="">${data.q}</span><br> Score:<span class="">${data.a}<button class = "" type ="button">close</button></span></li>`
-            popupSection.innerHTML += item
-        }
-    })
-}
+// const displayPopup = (popupdata, id) => {
+//     popupdata.map((data) => {
+//         if (id === data.c) {
+//             const item = `<li> Name: <span class="">${data.q}</span><br> Score:<span class="">${data.a}<button class = "close-button" type ="button">X</button></span></li>`
+//             popupSection.innerHTML += item
+//         }
+//     })
+    
+// }
 
 
 
