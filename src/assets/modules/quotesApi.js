@@ -1,11 +1,10 @@
-const api_url ="https://zenquotes.io/api/quotes/"
+import { displayPopup, displayQuotes } from "./displayQuotes";
+const itemList = document.querySelector('.item-list')
+export async function getApi(data)
 
-export async function getapi(url)
 {
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
+  const response = await fetch('https://zenquotes.io/api/quotes/',)
+  .then(response => response.json())
+  .then(data => displayQuotes(data))
+  return response
 }
-
-getapi(api_url);
-
