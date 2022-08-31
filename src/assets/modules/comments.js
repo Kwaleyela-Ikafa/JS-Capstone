@@ -23,7 +23,6 @@ export const getComments = async (id, commentSection) => {
   };
 
   export const postComment = (id, username, comment) => {
-    console.log(id, username, comment )
     fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o6txESDfE27QaTrvkBpH/comments', {
       method: 'POST',
       headers: {
@@ -40,5 +39,5 @@ export const getComments = async (id, commentSection) => {
       .catch((error) => {
         console.log(error);
       });
-      location.reload()
+      // location.reload()
   };

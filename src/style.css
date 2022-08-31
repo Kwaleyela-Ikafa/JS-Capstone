@@ -1,3 +1,11 @@
+:root {
+    --primary-light-hsl: 200, 100%, 91%;
+    --primary-hsl: 200, 100%, 50%;
+    --primary-dark-hsl: 200, 100%, 6%;
+    --success-hsl: 100, 60%, 50%;
+    --error-hsl: 0, 60%, 50%;
+  }
+  
 body{
     font-family: 'Playfair Display', sans-serif;
     margin: 0;
@@ -56,6 +64,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     width: 30%;
     position: relative;
+}
+
+button{
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+    background-color: hsl(var(--primary-dark-hsl), 0.25);
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: 0.25em;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
 }
 
 

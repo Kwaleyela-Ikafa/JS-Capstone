@@ -9,9 +9,10 @@ export const displayQuotes = (data) => {
         let idHolder= i + 1;
         item.ids = idHolder.toString()
       });
+      console.log(data)
     let slicedArray = data.slice(0, 6)
     slicedArray.map((array) => {
-        const item = `<li><span class="">${array.q}</span><br><span class="">${array.a}<button class = "display-popup" type ="button" id = ${array.ids}>Comments</button></span><button class="likes-btn" id="${array.ids}">Likes</button><p class="likes-count" data="${array.ids}"></p></li>`
+        const item = `<li><span class="">${array.author}</span><br><span class="">${array.text}<button class = "display-popup" type ="button" id = ${array.ids}>Comments</button></span><button class="likes-btn" id="${array.ids}">Likes</button><p class="likes-count" data="${array.ids}"></p></li>`
         itemList.innerHTML += item
 
 
