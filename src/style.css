@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(123, 129, 134);
+  border: 1px solid #2e2d2d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+* ul li {
+  list-style-type: none;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nav-list {
+  gap: 100px;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.characterCards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  padding-top: 100px;
+  background-color: beige;
+}
+
+.characterCards li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.album-image img {
+  width: 275px;
+  height: 275px;
+  border-radius: 5px;
+  box-shadow: 4px 4px;
+}
+
+/* .album-image img:hover {
+    transform: rotate(20deg);
+  } */
+
+/* Like button CSS */
+
+.like-section {
+  display: flex;
+  padding: 20px;
+  gap: 80px;
+}
+
+.like-section .char-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.likes-btn i {
+  cursor: pointer;
+}
+
+.like-icon:hover {
+  font-weight: bolder;
+  color: red;
+}
+
+.likes-count {
+  font-weight: 700;
+  color: blue;
+  padding: 3px;
+}
+
+.comment-btn {
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+}

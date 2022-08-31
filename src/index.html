@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigma Quotes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
+    <title>BobsBurgers</title>
 </head>
 <body>
-    <header>
-        <div class="logo"><h1>Logo Place Holder</h1></div>
-        
-        <ul class="nav-bar">
-            <li><a href="#" class="nav-bar-link">Home</a></li>
+    <header class="header">
+        <h1 class="logo">BobsBurgers</h1>
+
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-bar-link">Characters(<span class="character-count item-count">0</span>)</a></li>
             <li><a href="#" class="nav-bar-link">About</a></li>
-            <li><a href="#" class="nav-bar-link">Contact</a></li>
-        </ul>
+          </ul>
+        </nav>
+        
     </header>
 
-    <section>
+    <section class="content">
         <!-- For Inserting info from Quotes API -->
-        <div class="post"></div>
+        <ul class="characterCards" id="characters"></ul>
 
     </section>
 
