@@ -19,7 +19,7 @@ const characterData = [];
 // function to display character images
 
 const displayImg = () => {
-  fetch('https://bobsburgers-api.herokuapp.com/characters/')
+  fetch(apiUrl)
     .then((res) => res.json())
     .then((data) => {
       data = data.slice(0, 6);
