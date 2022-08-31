@@ -5,7 +5,7 @@ export const displayPopup = (popupdata, id) => {
     popupdata.map((data) => {
         if (id === data.ids) {
             const item = `    
-            <p>${data.q}</span>
+            <p>${data.q}</p>
             <p>Author ${data.a}</p>
             <p class="comment-counter"></p>
             <ul class="comments-section"></ul>

@@ -17,6 +17,7 @@ export const getComments = async (id, commentSection) => {
             commentSection.innerHTML += `<li class="comments-section">${item.creation_date} ${item.username}: ${item.comment}</li>`;
           });
         }
+        const commentCounter = document.querySelector('.comment-counter')
         commentCounter.innerHTML = countComment(json);
       });
   };
