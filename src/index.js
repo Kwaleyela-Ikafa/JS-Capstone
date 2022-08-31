@@ -1,19 +1,20 @@
 import './style.css';
 import { addLikes, displayLikes } from './assets/modules/like.js';
+import { displayCount } from './assets/modules/counter.js';
 
 const characterContainer = document.getElementById('characters');
 const apiUrl = 'https://bobsburgers-api.herokuapp.com/characters/';
 
 const characterData = [];
 
-const characterInformation = async () => {
-  const request = new Request(apiUrl);
-  const response = await fetch(request)
-    .then((res) => res.json)
-    .then((data) => data.result)
-    .catch(() => 'error');
-  return response;
-};
+// const characterInformation = async () => {
+//   const request = new Request(apiUrl);
+//   const response = await fetch(request)
+//     .then((res) => res.json)
+//     .then((data) => data.result)
+//     .catch(() => 'error');
+//   return response;
+// };
 
 // function to display character images
 
@@ -45,24 +46,9 @@ const displayImg = () => {
       }
       addLikes();
       displayLikes();
+      displayCount();
     });
 };
-
-// function to count number of elements
-
-// const countItems = (items) => {
-//   let characters = 0;
-//   items.forEach((item) => {
-//     if (item.Type === ) {
-//       characters += 1;
-//     }
-//   });
-//   const characterCount = document.querySelectorAll('.character-count');
-//   characterCount.forEach((counter) => {
-//     counter.innerHTML = characters;
-//   });
-//   return characterCount;
-// };
 
 window.onload = () => {
   displayImg();
