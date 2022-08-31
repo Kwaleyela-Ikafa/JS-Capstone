@@ -4,9 +4,14 @@ const popupSection = document.querySelector('.popup')
 
 
 export const displayQuotes = (data) => {
+    data.forEach((item, i) => {
+        let idHolder= i + 1;
+        item.ids = idHolder.toString()
+      });
+      console.log(data)
     let slicedArray = data.slice(0, 6)
     slicedArray.map((array) => {
-        const item = `<li> Name: <span class="">${array.q}</span><br> Score:<span class="">${array.a}<button class = "display-popup" type ="button" id = ${array.c}>Comments</button></span></li>`
+        const item = `<li><span class="">${array.q}</span><br><span class="">${array.a}<button class = "display-popup" type ="button" id = ${array.ids}>Comments</button></span></li>`
         itemList.innerHTML += item
 
         const displayPopupButton = document.querySelectorAll('.display-popup')
@@ -19,16 +24,6 @@ export const displayQuotes = (data) => {
         }
     })
 }
-
-// const displayPopup = (popupdata, id) => {
-//     popupdata.map((data) => {
-//         if (id === data.c) {
-//             const item = `<li> Name: <span class="">${data.q}</span><br> Score:<span class="">${data.a}<button class = "close-button" type ="button">X</button></span></li>`
-//             popupSection.innerHTML += item
-//         }
-//     })
-    
-// }
 
 
 
