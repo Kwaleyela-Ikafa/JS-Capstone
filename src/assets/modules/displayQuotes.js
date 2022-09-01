@@ -13,7 +13,6 @@ export const displayQuotes = (data) => {
   slicedArray.map((array) => {
     const item = `<li>
         <p>${array.text}</p>
-        <img src="https://picsum.photos/390/200">
         <button class="likes-btn button likes-count" id="${array.ids}" data="${array.ids}">Likes: </button>
         <button class = "display-popup button" type ="button" id = ${array.ids}>Comments</button>   </li>
         `
