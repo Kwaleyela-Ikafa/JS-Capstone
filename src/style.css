@@ -100,3 +100,119 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+/* Pop up CSS */
+
+/* .popup-con {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(15, 41, 29, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(108, 115, 221, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+.div-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.popup {
+  width: 15%;
+  height: 10%;
+}
+
+.pop-up-img {
+  height: 350%;
+  position: relative;
+  bottom: 450%;
+  left: 100%;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px;
+}
+
+#closePopUp {
+  position: relative;
+  left: 60%;
+  bottom: 45%;
+  cursor: pointer;
+}
+
+#comment {
+  position: relative;
+  top: 10px;
+  width: 100%;
+  height: 100px;
+}
+
+.inputs {
+  position: relative;
+  top: 200px;
+  right: 18%;
+}
+
+#name,
+#comment {
+  border: 2px solid black;
+}
+
+#sendBtn {
+  position: relative;
+  top: 15px;
+  width: 40%;
+  border: 2.5px solid black;
+  background: white;
+  box-shadow: 4px 4px;
+  font-size: 16px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+#sendBtn:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+#show-comments {
+  color: #000;
+  text-shadow: 2px 5px 6px red;
+  font-size: larger;
+  font-weight: 600;
+}
+
+h2 {
+  position: relative;
+  right: 10px;
+} */
+
+.footer {
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.footer p {
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
