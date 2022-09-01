@@ -29,7 +29,7 @@ export const displayLikes = async () => {
   totalLikes.forEach((likes) => {
     const id = likes.getAttribute('data');
     likesData.forEach((item) => {
-      if (item.item_id === id) likes.innerHTML = item.likes;
+      if (item.item_id === id) likes.innerHTML = `Likes: ${item.likes}`
     });
   });
 };

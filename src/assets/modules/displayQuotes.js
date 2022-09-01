@@ -1,41 +1,39 @@
-import { displayPopup } from "./displayPopup"
-import { addLikes, displayLikes } from "./likes"
+import { displayPopup } from './displayPopup'
+import { addLikes, displayLikes } from './likes'
 const itemList = document.querySelector('.item-list')
-const popupSection = document.querySelector('.popup')
-
 
 export const displayQuotes = (data) => {
-    data.forEach((item, i) => {
-        let idHolder= i + 1;
-        item.ids = idHolder.toString()
-      });
-      console.log(data)
-    let slicedArray = data.slice(0, 6)
-    slicedArray.map((array) => {
-        const item = `<li><span class="">${array.author}</span><br><span class="">${array.text}<button class = "display-popup" type ="button" id = ${array.ids}>Comments</button></span><button class="likes-btn" id="${array.ids}">Likes</button><p class="likes-count" data="${array.ids}"></p></li>`
-        itemList.innerHTML += item
+  data.forEach((item, i) => {
+    const idHolder = i + 1
+    item.ids = idHolder.toString()
+  })
+  console.log(data)
+  const slicedArray = data.slice(0, 9)
+  // eslint-disable-next-line array-callback-return
+  slicedArray.map((array) => {
+    const item = `<li>
+        <p>${array.text}</p>
+        <img src="https://picsum.photos/390/200">
+        <button class="likes-btn button likes-count" id="${array.ids}" data="${array.ids}">Likes: </button>
+        <button class = "display-popup button" type ="button" id = ${array.ids}>Comments</button>   </li>
+        `
+    itemList.innerHTML += item
 
-
-
-        const displayPopupButton = document.querySelectorAll('.display-popup')
-        if (displayPopupButton.length !== 0) {
-            for (let i = 0; i < displayPopupButton.length; i++) {
-                displayPopupButton[i].addEventListener('click', (e) => {
-                    displayPopup(slicedArray, e.target.id)
-                })
-            }
-        }
-        const counter = () => {
-            const counterSection = document.querySelector('.counter')
-            const counterInfo = slicedArray.length
-            counterSection.innerHTML = counterInfo
-        }
-        counter()
-    })
-    displayLikes()
-    addLikes()
+    const displayPopupButton = document.querySelectorAll('.display-popup')
+    if (displayPopupButton.length !== 0) {
+      for (let i = 0; i < displayPopupButton.length; i++) {
+        displayPopupButton[i].addEventListener('click', (e) => {
+          displayPopup(slicedArray, e.target.id)
+        })
+      }
+    }
+    const counter = () => {
+      const counterSection = document.querySelector('.counter')
+      const counterInfo = slicedArray.length
+      counterSection.innerHTML = `Displaying ${counterInfo} quotes `
+    }
+    counter()
+  })
+  displayLikes()
+  addLikes()
 }
-
-
-
-
