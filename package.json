@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.10"
   }
 }
